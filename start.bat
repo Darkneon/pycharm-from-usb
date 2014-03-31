@@ -2,6 +2,7 @@
 setlocal enabledelayedexpansion
 set INTEXTFILE=idea.properties
 set OUTTEXTFILE=idea_out.properties
+set PYCHARM_INSTALL_PATH=PyCharm Community Edition 3.1.1
 set SEARCHTEXT=#{drive_letter}
 set REPLACETEXT=%cd:~0,1%
 set OUTPUTLINE=
@@ -14,7 +15,10 @@ SET modified=!string:%SEARCHTEXT%=%REPLACETEXT%!
 >> %OUTTEXTFILE% echo !modified!
 )
 
-cp %OUTTEXTFILE% "PyCharm Community Edition 3.1.1\bin\idea.properties"
+echo "%PYCHARM_INSTALL_PATH%\bin\idea.properties"
+
+cp %OUTTEXTFILE% "%PYCHARM_INSTALL_PATH%\bin\idea.properties"
 del %OUTTEXTFILE%
 
-"PyCharm Community Edition 3.1.1\bin\pycharm.exe"
+"%PYCHARM_INSTALL_PATH%\bin\pycharm.exe"
+

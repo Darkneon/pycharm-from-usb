@@ -19,9 +19,9 @@ Requirements:
 
 The folder structure of the USB must be
 
-/-
-  /config
-  /PyCharm Community Edition 3.1.1
+    /-
+      /config
+      /PyCharm Community Edition 3.1.1
   
   
 Credits:
